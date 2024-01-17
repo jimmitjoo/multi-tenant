@@ -1,10 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "jimmitjoo/multi-tenant",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "This is a boilerplate for multi tenant applications written in Laravel and Filament.",
     "keywords": [
         "laravel",
-        "framework"
+        "filament",
+        "multi-tenant"
     ],
     "license": "MIT",
     "require": {
