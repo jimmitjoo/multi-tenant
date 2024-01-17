@@ -17,7 +17,7 @@ class OrganizationFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->company(),
         ];
     }
 }

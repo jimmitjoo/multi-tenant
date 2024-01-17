@@ -73,6 +73,11 @@ class AdminPanelProvider extends PanelProvider
             ->tenantMiddleware([
                 ApplyTenantScopes::class,
             ], isPersistent: true)
-            ->spa();
+            ->spa()
+            ->navigationGroups([
+                'Shop',
+                'Blog',
+                'Settings',
+            ]);
     }
 }
