@@ -25,13 +25,15 @@ class InviteToOrganization extends Page
 
     public ?array $data = [];
 
+    public static ?string $title = 'Invite User';
+
     public array $rules = [
         'email' => ['required', 'email'],
     ];
 
     public static function getLabel(): string
     {
-        return __('Invite to Organization');
+        return __('Invite');
     }
 
     public function form(Form $form): Form

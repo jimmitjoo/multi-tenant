@@ -43,10 +43,16 @@ class UserFactory extends Factory
         ]);
     }
 
-    public function withOrganization()
+    public function withOrganization($organization = null): static
     {
-        return $this->afterCreating(function ($user) {
-            $user->organizations()->attach(Organization::factory()->create());
+        if (is_int($organization)) {
+            $organization = Organization::find($organization);
+        } elseif (is_null($organization)) {
+            $organization = Organization::factory()->create();
+        }
+
+        return $this->afterCreating(function ($user) use ($organization) {
+            $user->organizations()->attach($organization);
         });
     }
 }
